@@ -6,12 +6,12 @@ on:
 
 jobs:
   ci:
-    runs-on: ubuntu-latest #на какой из виртуалок самого!!!! github выполнять (так называеый runner - Settings -> Actions -> Runners)
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4 #встроенная команда shell аля git clone + git checkout (девопсы кастомят) (тут uses можно указывать run как в докере ниже)
+        uses: actions/checkout@v4
 
-      - name: HTML lint # скачивние html линтера - статический анализатор кода
+      - name: HTML lint
         run: |
           npm install -g htmlhint 
           htmlhint index.html
